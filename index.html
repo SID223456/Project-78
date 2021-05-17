@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Project 78</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+
+  <body>
+    <h1>My Family</h1>
+    <img id="img_of_family" src="a-family-four-vector-9875227.jpg" />
+    <div>
+      <h3 id="family_name">Family Book</h3>
+    </div>
+
+    <div>
+      <button onclick="update()">Next</button>
+
+      <script>
+        var images = [
+          "a-family-four-vector-9875227.jpg",
+          "DSC_6704.JPG",
+          "IMG_0983.JPG",
+          "IMG_9837.JPG",
+          "IMG_1290.JPG",
+        ];
+
+        var names = [
+          "Family Book",
+          "Rajarajan Ramalingam",
+          "Ezhilarasi Rajarajan",
+          "Siddhesh Rajarajan",
+          "Oveyaavardhini Rajarajan",
+        ];
+
+        var i = 0;
+        function update() {
+          i++;
+          var number_of_people_in_array = "4";
+          if (i > number_of_people_in_array) {
+            i = 0;
+          }
+
+          var updatedImages = images[i];
+          var updatedNames = names[i];
+
+          document.getElementById("img_of_family").src = updatedImages;
+          document.getElementById("family_name").innerHTML = updatedNames;
+        }
+      </script>
+    </div>
+  </body>
+</html>
